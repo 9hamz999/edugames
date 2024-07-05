@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة سباق السيارات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* يمنع التمرير عندما يكون في وضع ملء الشاشة */
+			background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D9%88%D8%A7%D8%AC%D9%87%D8%A9.png);
+			background-size: 100vw 100vh;
+			cursor: url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D9%85%D8%A4%D8%B4%D8%B1%20%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A9.png'), auto;
+			user-select: none;
+        }
+		.mainmenu {
+		height: 100vh;
+		width: 100vw;
+		}
+		.khashab {
+		position: absolute;
+		top: 64vh;
+		left: 33vw;
+		height: 35vh;
+		width: 35vw;
+		}
+		.startgame {
+		position: absolute;
+		top: 68vh;
+		left: 42.6vw;
+		height: 10vh;
+		width: 15vw;
+		}
+		.startgame:hover {
+		top: 69vh;
+		left: 43.6vw;
+		height: 8vh;
+		width: 13vw;
+		}
+		.shareet {
+		position: absolute;
+		top: 76vh;
+		left: 30.6vw;
+		height: 13vh;
+		width: 40vw;
+		}
+		.shareet1 {
+		position: absolute;
+		top: 76vh;
+		left: 30.6vw;
+		height: 13vh;
+		width: 40vw;
+		}
+		
+		
+        .race-track {
+            background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%AE%D8%B1%D9%8A%D8%B7%D8%A9.png) no-repeat center center;
+            background-size: 100vw 100vh;
+            position: relative;
+        }
+        .car {
+            position: absolute;
+			width: 2vw;
+			height: 10vh;
+
+        }
+        .car1 {
+		transform: rotate(90deg);
+		left: 4vw;
+		top: 44vh;
+		height: 16vh;
+		width: 4vw;
+		z-index: 3;
+        }
+
+        .car2 {
+		transform: rotate(90deg);
+		left: 4vw;
+		top: 27vh;
+		height: 16vh;
+		width: 4vw;
+		z-index: 3;
+        }
+		.car3 {
+		transform: rotate(90deg);
+		left: 4vw;
+		top: 10vh;
+		height: 16vh;
+		width: 4vw;
+		z-index: 3;
+        }
+		.car4 {
+		transform: rotate(90deg);
+		left: 4vw;
+		top: 61vh;
+		height: 16vh;
+		width: 4vw;
+		z-index: 3;
+        }		
+		
+        .boutto {
+            margin: 1vw 1vw 0px 0px;
+            font-size: 16px;
+			width: 10vw;
+			float: right;
+        }
+		.boutto:hover {
+			margin: 1.4vw 1.5vw 0px 0px;
+			width: 9vw;
+			transition: 0.3s;
+        }
+        .boutto1 {
+            margin: 1vw 1vw 0px 0px;
+            font-size: 16px;
+			width: 4vw;
+			float: right;
+        }
+		.boutto1:hover {
+			margin: 1.4vw 1.5vw 0px 0px;
+			width: 3.5vw;
+			transition: 0.3s;
+        }			
+		.home1 {
+		position: absolute;
+		z-index: 4;
+		width: 13vw;
+		display: flex;
+		flex-direction: row;
+		margin-top: 6vh;		
+		}
+		
+		
+		
+		@keyframes rotateElement1 {
+			0%{
+			left: 4vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 20vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car1.rotate {
+		animation: rotateElement1;
+		}
+		@keyframes rotateElement2 {
+			0%{
+			left: 20vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 40vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car1.rotate {
+		animation: rotateElement2;
+		}
+		@keyframes rotateElement3 {
+			0%{
+			left: 40vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 60vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car1.rotate {
+		animation: rotateElement3;
+		}
+		@keyframes rotateElement4 {
+			0%{
+			left: 60vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 80vw;
+			top: 44vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car1.rotate {
+		animation: rotateElement4;
+		}
+		
+		@keyframes rotateElement21 {
+			0%{
+			left: 4vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 20vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car2.rotate {
+		animation: rotateElement21;
+		}
+		@keyframes rotateElement22 {
+			0%{
+			left: 20vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 40vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car2.rotate {
+		animation: rotateElement22;
+		}
+		@keyframes rotateElement23 {
+			0%{
+			left: 40vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 60vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car2.rotate {
+		animation: rotateElement23;
+		}
+		@keyframes rotateElement24 {
+			0%{
+			left: 60vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 80vw;
+			top: 27vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car2.rotate {
+		animation: rotateElement24;
+		}
+
+
+
+
+		@keyframes rotateElement31 {
+			0%{
+			left: 4vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 20vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car3.rotate {
+		animation: rotateElement31;
+		}
+		@keyframes rotateElement32 {
+			0%{
+			left: 20vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 40vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car3.rotate {
+		animation: rotateElement32;
+		}
+		@keyframes rotateElement33 {
+			0%{
+			left: 40vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 60vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car3.rotate {
+		animation: rotateElement33;
+		}
+		@keyframes rotateElement34 {
+			0%{
+			left: 60vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 80vw;
+			top: 61vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car3.rotate {
+		animation: rotateElement34;
+		}
+
+
+
+
+
+
+		@keyframes rotateElement41 {
+			0%{
+			left: 4vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 20vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car4.rotate {
+		animation: rotateElement41;
+		}
+		@keyframes rotateElement42 {
+			0%{
+			left: 20vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 40vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car4.rotate {
+		animation: rotateElement42;
+		}
+		@keyframes rotateElement43 {
+			0%{
+			left: 40vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 60vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car4.rotate {
+		animation: rotateElement43;
+		}
+		@keyframes rotateElement44 {
+			0%{
+			left: 60vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}
+			100% {
+			left: 80vw;
+			top: 10vh;
+			transform: rotate(90deg);
+			}							
+		}
+		#car4.rotate {
+		animation: rotateElement44;
+		}
+
+
+
+		
+		@keyframes shareet1 {
+			0%{
+			width: 1vw;
+			left: 49.6vw;
+			}
+			100% {
+			width: 40vw;
+			left: 30.6vw;
+			}							
+		}
+		#shareet1.rotate {
+		animation: shareet1;
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		.street {
+		position: absolute;
+		left: 0vw;
+		top: 44vh;
+		height: 17vh;
+		width: 90vw;
+		z-index: 2;
+		}
+		.street2 {
+		position: absolute;
+		left: 0vw;
+		top: 27vh;
+		height: 17vh;
+		width: 90vw;
+		z-index: 2;
+		}
+		.street3 {
+		position: absolute;
+		left: 0vw;
+		top: 10vh;
+		height: 17vh;
+		width: 90vw;
+		z-index: 2;
+		}
+		.street4 {
+		position: absolute;
+		left: 0vw;
+		top: 61vh;
+		height: 17vh;
+		width: 90vw;
+		z-index: 2;
+		}		
+		
+		
+		}
+		
+
+
+    </style>
+</head>
+<body>
+	<div id="mainmenu" class="mainmenu">
+	<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9.png" id="khashab" class="khashab"></img>
+	<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D8%A8%D8%AF%D8%A3.png" id="startgame" class="startgame"></img>
+	</div>
+	<div id="shareetint">
+	<img style="display:none;"  id="shareet1" class="shareet1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B4%D8%B1%D9%8A%D8%B7%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%201.png"></img>	
+	<img style="display:none;" id="shareet" class="shareet" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B4%D8%B1%D9%8A%D8%B7%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1.png"></img>
+	</div>
+	
+	
+    <div class="race-track" id="raceTrack" style="display: none;">
+        <img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%B2%D8%B1%D9%82%D8%A7%D8%A1.png" class="car car1" id="car1"></img>
+        <img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%AE%D8%B6%D8%B1%D8%A7%D8%A1.png" class="car car2" id="car2"></img>
+		<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%B5%D9%81%D8%B1%D8%A7%D8%A1.png" class="car car3" id="car4"></img>
+		<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%AD%D9%85%D8%B1%D8%A7%D8%A1.png" class="car car4" id="car3"></img>
+		
+		
+			<div>
+			<div class='home1'>
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/home.png" id="home" class='boutto1' ></img>	
+			<img class='boutto1' id="rest" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/rest.png"></img>			
+			</div>				
+			<ul style="display: flex;flex-direction: column;margin: 0;padding: 0;width: 13vw;background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%B4%D8%B1%D9%8A%D8%B7%20%D8%AC%D8%A7%D9%86%D8%A8%D9%8A1.png);justify-content: center;height: 100vh;z-index: 3;position: sticky;">
+
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D9%86%D8%B7%D9%84%D9%82%20%D8%A3%D8%B5%D9%81%D8%B1.png" id="startButton4" class='boutto' ></img>			
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D9%86%D8%B7%D9%84%D9%82%20%D8%A3%D8%AE%D8%B6%D8%B1.png" id="startButton2" class='boutto' ></img>
+		    <img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D9%86%D8%B7%D9%84%D9%82%20%D8%A3%D8%B2%D8%B1%D9%82.png" id="startButton1" class='boutto' ></img>
+		    <img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D9%86%D8%B7%D9%84%D9%82%20%D8%A3%D8%AD%D9%85%D8%B1.png" id="startButton3" class='boutto' ></img>			
+
+			<img class='boutto' id="fullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%85%D9%84%D8%A1%20%D8%A7%D9%84%D8%B4%D8%A7%D8%B4%D8%A9.png"></img>
+			</ul>
+			</div>
+		<div>
+		<img id="street2" class="street2" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/1%D8%B4%D8%A7%D8%B1%D8%B9.png"></img>		
+		<img id="street" class="street" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/1%D8%B4%D8%A7%D8%B1%D8%B9.png"></img>
+		<img id="street3" class="street3" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/1%D8%B4%D8%A7%D8%B1%D8%B9.png"></img>
+		<img id="street4" class="street4" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/1%D8%B4%D8%A7%D8%B1%D8%B9.png"></img>			
+		</div>
+		
+    </div>
+
+	<audio style="display: none;" id="myAudio1" controls>
+    <source src="https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%AF%D8%B9%D8%B3%D8%A9%20%D8%A8%D9%86%D8%B2%D9%8A%D9%86.mp3" type="audio/mpeg">
+    متصفحك لا يدعم تشغيل الصوت.
+	</audio>
+	<audio style="display: none;" id="clickSound" controls>
+    <source src="https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D9%86%D9%82%D8%B1.mp3" type="audio/mpeg">
+    متصفحك لا يدعم تشغيل الصوت.
+	</audio>
+	
+	
+	<script>
+	var mainmenu= document.getElementById('mainmenu');
+	var raceTrack = document.getElementById('raceTrack');
+	var body = document.body;
+	var clickSound = document.getElementById('clickSound');
+	var mouseenter1 = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%B5%D9%88%D8%AA%20%D8%A7%D9%84%D8%AA%D9%85%D8%B1%D9%8A%D8%B1.mp3');
+	var shareet = document.getElementById('shareet');
+	var shareet1 = document.getElementById('shareet1');	
+	document.getElementById('startgame').onclick = function() {
+	clickSound.play();
+	mainmenu.style.display = 'none';
+	shareet.style.display = '';
+	shareet1.style.display = '';
+	var animationshareet1 = [{animation:'2s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running shareet1'}];
+	shareet1.style.animation = animationshareet1[0].animation;
+	
+	setTimeout(function() {
+	raceTrack.style.display = '';
+	shareet.style.display = 'none';
+	shareet1.style.display = 'none';
+	}, 2000);
+	
+	};
+	
+	document.getElementById('home').onclick = function() {	
+		raceTrack.style.display = 'none';
+		mainmenu.style.display = '';
+		
+		if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Firefox
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari, Opera
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE/Edge
+            document.msExitFullscreen();
+        }
+		
+	};
+	
+    body.addEventListener('mousedown', function() {
+		body.style.cursor = 'url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D9%85%D8%A4%D8%B4%D8%B1%20%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A91.png), auto';
+		});
+		
+		
+		
+		
+	body.addEventListener('mouseup', function() {
+        body.style.cursor = 'url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%82/%D9%85%D8%B5%D8%A7%D8%AF%D8%B1/%D9%85%D8%A4%D8%B4%D8%B1%20%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A9.png), auto';
+        });
+		
+	document.querySelector('.startgame').addEventListener('mouseenter', function() {
+            mouseenter1.play();
+        });
+		
+		
+		
+		
+	var elements = document.querySelectorAll('.boutto');
+		elements.forEach(function(element) {
+		element.addEventListener('mouseenter', function() {
+        mouseenter1.play();
+		});
+		});		
+		
+		
+	</script>
+	
+    <script>
+        var car1 = document.getElementById('car1');
+        var car2 = document.getElementById('car2');
+        var car3 = document.getElementById('car3');
+        var car4 = document.getElementById('car4');		
+        var raceTrack = document.getElementById('raceTrack');
+        var path = [
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement1'},
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement1'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement2'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement3'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement4'},
+
+
+        ];
+        var path2 = [
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement21'},
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement21'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement22'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement23'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement24'},
+
+
+        ];
+		 var path3 = [
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement31'},
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement31'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement32'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement33'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement34'},
+
+
+        ];
+		 var path4 = [
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement41'},
+            {animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement41'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement42'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement43'},
+			{animation:'1.7s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running rotateElement44'},
+
+
+        ];			
+        var currentPosition = 0;
+
+        document.getElementById('startButton1').onclick = function() {
+            if (currentPosition < path.length - 1) {
+                currentPosition++;
+				car1.style.animation = path[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				car1.style.animation = path[currentPosition].animation;
+
+            }							
+			var audio1 = document.getElementById('myAudio1');
+			audio1.play();
+        }
+        var currentPosition2 = 0;		
+        document.getElementById('startButton2').onclick = function() {
+            if (currentPosition2 < path2.length - 1) {
+                currentPosition2++;
+				car2.style.animation = path2[currentPosition2].animation;
+
+            } else {
+                currentPosition2 = 0;
+				car2.style.animation = path2[currentPosition2].animation;
+
+            }							
+			var audio1 = document.getElementById('myAudio1');
+			audio1.play();
+        }
+        var currentPosition3 = 0;		
+        document.getElementById('startButton3').onclick = function() {
+            if (currentPosition3 < path2.length - 1) {
+                currentPosition3++;
+				car3.style.animation = path3[currentPosition3].animation;
+
+            } else {
+                currentPosition3 = 0;
+				car3.style.animation = path3[currentPosition3].animation;
+
+            }							
+			var audio1 = document.getElementById('myAudio1');
+			audio1.play();
+        }
+        var currentPosition4 = 0;		
+        document.getElementById('startButton4').onclick = function() {
+            if (currentPosition4 < path4.length - 1) {
+                currentPosition4++;
+				car4.style.animation = path4[currentPosition4].animation;
+
+            } else {
+                currentPosition4 = 0;
+				car4.style.animation = path4[currentPosition4].animation;
+
+            }							
+			var audio1 = document.getElementById('myAudio1');
+			audio1.play();
+        }		
+		
+		document.getElementById('rest').onclick = function() {
+                car1.style.left = '4vw';
+                car1.style.top = '44vh';
+				car1.style.transform = 'rotate(90deg)';
+				car1.style.animation = 'none';
+                car2.style.left = '4vw';
+                car2.style.top = '27vh';
+				car2.style.transform = 'rotate(90deg)';
+				car2.style.animation = 'none';
+                car3.style.left = '4vw';
+                car3.style.top = '61vh';
+				car3.style.transform = 'rotate(90deg)';
+				car3.style.animation = 'none';
+                car4.style.left = '4vw';
+                car4.style.top = '10vh';
+				car4.style.transform = 'rotate(90deg)';
+				car4.style.animation = 'none';				
+				currentPosition = 0;
+				currentPosition2 = 0;
+				currentPosition3 = 0;
+				currentPosition4 = 0;
+		}
+
+document.getElementById('fullscreen').addEventListener('click', function() {
+    if (!document.fullscreenElement) {
+        if (raceTrack.requestFullscreen) {
+            raceTrack.requestFullscreen();
+        } else if (raceTrack.mozRequestFullScreen) { // Firefox
+            raceTrack.mozRequestFullScreen();
+        } else if (raceTrack.webkitRequestFullscreen) { // Chrome, Safari, Opera
+            raceTrack.webkitRequestFullscreen();
+        } else if (raceTrack.msRequestFullscreen) { // IE/Edge
+            raceTrack.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Firefox
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari, Opera
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE/Edge
+            document.msExitFullscreen();
+        }
+    }
+});
+
+    </script>
+</body>
+</html>
