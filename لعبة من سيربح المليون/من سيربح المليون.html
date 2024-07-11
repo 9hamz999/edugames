@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar">
+	<head>
+		<meta charset="UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<title>مَن سيربح المليون</title>
+		<style>
+			.body {
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			align-content: center;
+			user-select: none;
+			cursor: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D9%85%D8%A4%D8%B4%D8%B1%20%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A9/%D9%85%D8%A4%D8%B4%D8%B11.png), auto;
+			 -webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			}
+			.mainmenu {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			}
+			.logo {
+			height: 45vh;
+			width: 30vw;
+			}
+			.Boxb {
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 60vh;
+			left: 44.5vw;
+			}
+			.startbutton, .editingbutton, .optionsbutton, .usbutton {
+			width: 10vw;
+			height: 5vh;
+			margin-bottom: 2vh;
+			}
+			.startbutton:hover, .editingbutton:hover, .optionsbutton:hover, .usbutton:hover{
+			width: 9vw;
+			height: 4vh;
+			margin-top: 1vh;
+			margin-bottom: 2vh;
+			transition: 0.25s;
+			}
+			.buttonBox {
+			height: 40vh;
+			width: 25vw;
+			}
+			.back {
+			position: absolute;
+			top: 58vh;
+			left: 47.5vw;
+			width: 8vh;
+			height: 2.5vw;
+			border-radius: 2vh;
+			}
+			.back:hover {
+			background: #00000030;	
+			transition: 0.25s;
+			}
+			.option1 {
+			position: absolute;
+			top: 67vh;
+			left: 47vw;
+			width: 11vw;
+			height: 2.3vh;
+			}
+			.truefullscreen {
+			position: absolute;
+			left: 44vw;
+			top: 67vh;
+			height: 2.3vh;
+			width: 1.5vw;
+			border-radius: 1vh;
+			}
+			.truefullscreen:hover {
+			background: #00000030;
+			}
+			.falsefullscreen {
+			position: absolute;
+			left: 41.5vw;
+			top: 67vh;
+			height: 2.3vh;
+			width: 1.5vw;
+			border-radius: 1vh;
+			}
+			.falsefullscreen:hover {
+			background: #00000030;			
+			}
+			.gameplay {
+			width: 100vw;
+			height: 100vh;
+			}
+			.questionbox {
+			position: absolute;
+			top: 10vh;
+			left: 26.5vw;
+			}
+			.questionbox1 {
+			width: 45vw;
+			height: 50vh;
+			}
+			.textquestions {
+			position: absolute;
+			top: 17vh;
+			left: 4vw;
+			height: 26vh;
+			width: 36vw;
+			direction: rtl;
+			font-size: 3vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			}
+		</style>
+	</head>
+	<body id="body" class="body" style='background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/Home.png) no-repeat; background-size: 100vw 100vh;'>
+		<div id="mainmenu" class="mainmenu">
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/logo.png" id="logo" class="logo"></img>
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%B5%D9%86%D8%AF%D9%88%D9%82%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.png" id="buttonBox" class="buttonBox"></img>
+		</div>
+			<div id="Boxb" class="Boxb" style="display: flex;">
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/1%D8%A7%D8%A8%D8%AF%D8%A3.png" id="startbutton" class="startbutton"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9.png" id="editingbutton" class="editingbutton"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D9%84%D8%B6%D8%A8%D8%B71.png" id="optionsbutton" class="optionsbutton"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/1%D9%85%D9%86%20%D9%86%D8%AD%D9%86.png" id="usbutton" class="usbutton"></img>	
+			</div>
+		<div id="gameplay" class="gameplay" style="display:none;">
+			<div id="questionbox" class="questionbox">
+				<img id="questionbox1" class="questionbox1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9.png"></img>
+				<p id="textquestions" class="textquestions">هذا نصّ تجريبي لسؤال تجريبي، قل لي ما رأيك؟</p>
+			</div>
+		</div>
+		<div id="editing" class="editing">
+		</div>
+		<div id="options" class="options" style="display:none;">
+			<img id="back" class="back" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
+			<img id="option1" class="option1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B4%D8%A7%D8%B4%D8%A9%20%D9%85%D9%85%D8%AA%D9%84%D8%A6%D8%A9.png"></img>
+			<img id="truefullscreen" class="truefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B5%D8%AD.png"></img>			<img id="falsefullscreen" class="falsefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%AE%D8%B7%D8%A3.png"></img>				
+			
+		</div>
+		<div id="socialMedia" class="socialMedia">
+		</div>
+		
+<!--	<script>
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+document.onkeydown = function(e) {
+    if (e.keyCode == 123 || 
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || 
+        (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) || 
+        (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+      return false;
+    }
+  }  
+</script> -->
+<!-- المؤشّر -->
+	<script>
+body.addEventListener('mousedown', function() {
+	body.style.cursor = 'url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D9%85%D8%A4%D8%B4%D8%B1%20%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A9/%D9%85%D8%A4%D8%B4%D8%B12.png), auto';
+	});
+body.addEventListener('mouseup', function() {
+    body.style.cursor = 'url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D9%85%D8%A4%D8%B4%D8%B1%20%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A9/%D9%85%D8%A4%D8%B4%D8%B11.png), auto';
+    });
+</script>		
+<!-- ابدأ -->
+	<script>
+	var bodyElement = document.querySelector('body');	
+	var mainmenu = document.getElementById('mainmenu');	
+	var Boxb = document.getElementById('Boxb');
+	var	gameplay = document.getElementById('gameplay');
+	document.getElementById('startbutton').onclick = function() {
+		mainmenu.style.display = 'none';
+		Boxb.style.display = 'none';		
+		buttonSound.play();
+		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/Accounting%20Service%20Website%20in%20Yellow%20Dark%20Brown%20Illustrative%20Style%20(4).png') 0% 0% / 100vw 100vh no-repeat";
+		gameplay.style.display = '';
+	}
+	</script>
+<!-- إعداد الأسئلة -->
+	<script>
+	</script>
+<!-- الضبط -->
+	<script>
+	var elem = document.documentElement;
+	var Boxb = document.getElementById('Boxb');
+	var	options = document.getElementById('options');
+	var	back = document.getElementById('back');	
+	var buttonSound = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.mp3');
+	var truefullscreen = document.getElementById('truefullscreen');	
+	var falsefullscreen = document.getElementById('falsefullscreen');	
+	document.getElementById('optionsbutton').onclick = function() {
+		Boxb.style.display = 'none';
+		options.style.display = '';	
+		buttonSound.play();
+	}
+	document.getElementById('back').onclick = function() {
+		Boxb.style.display = 'flex';
+		options.style.display = 'none';	
+		buttonSound.play();
+	}
+	document.getElementById('truefullscreen').onclick = function() {
+		buttonSound.play();	
+		if (elem.requestFullscreen) {
+		elem.requestFullscreen();
+		} else if (elem.mozRequestFullScreen) { // Firefox
+		elem.mozRequestFullScreen();
+		} else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+			elem.webkitRequestFullscreen();
+		} else if (elem.msRequestFullscreen) { // IE/Edge
+		elem.msRequestFullscreen();
+		}
+		truefullscreen.style.background = '#00000030';
+		falsefullscreen.style.background = '#00000000';
+		
+	}
+	document.getElementById('falsefullscreen').onclick = function() {
+		buttonSound.play();	
+		if (document.exitFullscreen) {
+		document.exitFullscreen();
+		} else if (document.mozCancelFullScreen) { // Firefox
+		document.mozCancelFullScreen();
+		} else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+		document.webkitExitFullscreen();
+		} else if (document.msExitFullscreen) { // IE/Edge
+		document.msExitFullscreen();
+		}
+		truefullscreen.style.background = '#00000000';
+		falsefullscreen.style.background = '#00000030';
+		
+	}		
+	</script>
+<!-- مَن نَحن -->	
+	<script>
+	</script>
+	</body>
+</html>
