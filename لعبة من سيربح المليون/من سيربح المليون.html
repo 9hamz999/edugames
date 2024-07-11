@@ -4,8 +4,10 @@
 		<meta charset="UTF-8"></meta>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 		<title>مَن سيربح المليون</title>
+		<link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'/>
 		<style>
 			.body {
+			font-family: Tajawal;
 			height: 100vh;
 			margin: 0;
 			padding: 0;
@@ -31,8 +33,8 @@
 			flex-direction: column;
 			align-items: center;
 			position: absolute;
-			top: 60vh;
-			left: 44.5vw;
+			top: 61vh;
+			left: 45vw;
 			}
 			.startbutton, .editingbutton, .optionsbutton, .usbutton {
 			width: 10vw;
@@ -48,7 +50,8 @@
 			}
 			.buttonBox {
 			height: 40vh;
-			width: 25vw;
+			width: 22vw;
+			margin-top: 3vh;
 			}
 			.back {
 			position: absolute;
@@ -105,6 +108,7 @@
 			height: 50vh;
 			}
 			.textquestions {
+			word-spacing: -0.2vw;
 			position: absolute;
 			top: 17vh;
 			left: 4vw;
@@ -118,26 +122,319 @@
 			margin: 0;
 			text-align: justify;
 			}
+			.answerbox1 {
+			position: absolute;
+			height: 12vh;
+			width: 24vw;
+			top: 55vh;
+			left: 24vw;
+			}
+			.answerbox2 {
+			position: absolute;
+			height: 12vh;
+			width: 24vw;
+			top: 55vh;
+			left: -2vw;			
+			}
+			.answerbox3 {
+			position: absolute;
+			height: 12vh;
+			width: 24vw;
+			top: 69vh;
+			left: 24vw;					
+			}
+			.answerbox4 {
+			position: absolute;
+			height: 12vh;
+			width: 24vw;
+			top: 69vh;
+			left: -2vw;					
+			}
+			.answertext1 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 55.5vh;
+			left: 25.5vw;
+			height: 10vh;
+			width: 14vw;
+			direction: rtl;
+			font-size: 1.5vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			}
+			.answertext2 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 55.5vh;
+			left: -0.5vw;
+			height: 10vh;
+			width: 14vw;
+			direction: rtl;
+			font-size: 1.5vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			}
+			.answertext3 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 69.5vh;
+			left: 25.5vw;
+			height: 10vh;
+			width: 14vw;
+			direction: rtl;
+			font-size: 1.5vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			}	
+			.answertext4 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 69.5vh;
+			left: -0.5vw;
+			height: 10vh;
+			width: 14vw;
+			direction: rtl;
+			font-size: 1.5vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			}	
+			.answernum1 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 55vh;
+			left: 40.5vw;
+			height: 12vh;
+			width: 7.5vw;
+			direction: rtl;
+			font-size: 4vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			border-radius: 3vw;
+			color: white;			
+			}
+			.answernum2 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 55vh;
+			left: 14.5vw;
+			height: 12vh;
+			width: 7.5vw;
+			direction: rtl;
+			font-size: 4vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			border-radius: 3vw;
+			color: white;				
+			}
+			.answernum3 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 69vh;
+			left: 40.5vw;
+			height: 12vh;
+			width: 7.5vw;
+			direction: rtl;
+			font-size: 4vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			border-radius: 3vw;
+			color: white;				
+			}
+			.answernum4 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			top: 69vh;
+			left: 14.5vw;
+			height: 12vh;
+			width: 7.5vw;
+			direction: rtl;
+			font-size: 4vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			text-align: justify;
+			border-radius: 3vw;
+			color: white;				
+			}
+			.optionsgameplay {
+			position: absolute;
+			top: 2vw;
+			left: 93.5vw;
+			width: 4.5vw;
+			height: 7vh;
+			}
+			.optionsgameplay:hover {
+			position: absolute;
+			top: 2.5vw;
+			left: 94vw;
+			width: 3.5vw;
+			height: 6vh;
+			transition: 0.25s;
+			}				
+			.optionsGPslide {
+			display: flex;
+			margin-top: 12vh;
+			float: right;
+			width: 8.5vw;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			transition: 0.25s;			
+			}		
+			.backgameplay {
+			overflow: hidden;
+			width: 4.5vw;
+			height: 7vh;
+			margin-bottom: 1vh;			
+			}
+			.backgameplay:hover {
+			overflow: hidden;
+			width: 3.5vw;
+			height: 6vh;
+			margin-bottom: 2vh;
+			transition: 0.25s;			
+			}			
+			.restgameplay {
+			overflow: hidden;			
+			width: 4.5vw;
+			height: 7vh;	
+			}
+			.restgameplay:hover {
+			overflow: hidden;			
+			width: 3.5vw;
+			height: 6vh;
+			margin-top: 1vh;	
+			transition: 0.25s;		
+			}
+			.editingback {
+			position: absolute;
+			top: 2vw;
+			left: 93.5vw;
+			width: 4.5vw;
+			height: 7vh;
+			}
+			.editingback:hover {
+			position: absolute;
+			top: 2.5vw;
+			left: 94vw;
+			width: 3.5vw;
+			height: 6vh;
+			transition: 0.25s;
+			}
+			.whousback {
+			position: absolute;
+			top: 2vw;
+			left: 93.5vw;
+			width: 4.5vw;
+			height: 7vh;
+			}
+			.whousback:hover {
+			position: absolute;
+			top: 2.5vw;
+			left: 94vw;
+			width: 3.5vw;
+			height: 6vh;
+			transition: 0.25s;
+			}
+			.formdiv {
+			direction: rtl;
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			}
+			.questionsform {
+			text-align: center;
+			width: 80vw;
+			font-size: 2vw;
+			padding: 1vh 1vw;
+			border: solid 0.3vh #0000006e;
+			border-radius: 1vh;
+			margin-bottom: 1vh;
+			}
+			.answerinput {
+			font-size: 2vw;
+			font-family: Tajawal;
+			}
+			.inputclass {
+			font-size: 2vw;
+			font-family: Tajawal;
+			width: 15vw;
+			}
+			
 		</style>
 	</head>
-	<body id="body" class="body" style='background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/Home.png) no-repeat; background-size: 100vw 100vh;'>
+	<body id="body" class="body" style='background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png) no-repeat; background-size: 100vw 100vh;'>
 		<div id="mainmenu" class="mainmenu">
-			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/logo.png" id="logo" class="logo"></img>
-			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%B5%D9%86%D8%AF%D9%88%D9%82%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.png" id="buttonBox" class="buttonBox"></img>
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/logo%201.png" id="logo" class="logo"></img>
+			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D9%85%D8%B1%D8%A8%D8%B9%20%D8%AE%D9%84%D9%81%D9%8A%D8%A9.png" id="buttonBox" class="buttonBox"></img>
 		</div>
 			<div id="Boxb" class="Boxb" style="display: flex;">
-				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/1%D8%A7%D8%A8%D8%AF%D8%A3.png" id="startbutton" class="startbutton"></img>
-				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9.png" id="editingbutton" class="editingbutton"></img>
-				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A7%D9%84%D8%B6%D8%A8%D8%B71.png" id="optionsbutton" class="optionsbutton"></img>
-				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/1%D9%85%D9%86%20%D9%86%D8%AD%D9%86.png" id="usbutton" class="usbutton"></img>	
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D8%A7%D8%A8%D8%AF%D8%A3.png" id="startbutton" class="startbutton"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF.png" id="editingbutton" class="editingbutton"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D8%A7%D9%84%D8%B6%D8%A8%D8%B7.png" id="optionsbutton" class="optionsbutton"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D9%85%D9%86%20%D9%86%D8%AD%D9%86.png" id="usbutton" class="usbutton"></img>	
 			</div>
 		<div id="gameplay" class="gameplay" style="display:none;">
+			<img id="optionsgameplay" class="optionsgameplay" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA.png"></img>
+			<div id="optionsGPslide" class="optionsGPslide" style="height: 0vh;">
+			<img id="backgameplay" class="backgameplay" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
+			<img id="restgameplay" class="restgameplay" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A5%D8%B9%D8%A7%D8%AF%D8%A9.png"></img>			
+			</div>
 			<div id="questionbox" class="questionbox">
 				<img id="questionbox1" class="questionbox1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9.png"></img>
 				<p id="textquestions" class="textquestions">هذا نصّ تجريبي لسؤال تجريبي، قل لي ما رأيك؟</p>
+				<img id="answerbox1" class="answerbox1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
+				<p id="answertext1" class="answertext1">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
+				<p id="answernum1" class="answernum1">أ</p>
+				<img id="answerbox2" class="answerbox2" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
+				<p id="answertext2" class="answertext2">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
+				<p id="answernum2" class="answernum2">ب</p>
+				<img id="answerbox3" class="answerbox3" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
+				<p id="answertext3" class="answertext3">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
+				<p id="answernum3" class="answernum3">جـ</p>				
+				<img id="answerbox4" class="answerbox4" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
+				<p id="answertext4" class="answertext4">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
+				<p id="answernum4" class="answernum4">د</p>				
 			</div>
 		</div>
-		<div id="editing" class="editing">
+		<div id="editing" class="editing" style="display:none;">
+			<img id="editingback" class="editingback" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
+			<div id="formdiv" class="formdiv">
+				<form id="questionsform" class="questionsform">
+					<label for="answerinput">السؤال</label>
+					<input id="answerinput" class="answerinput" required></input>
+					<br></br>
+					<input id="trueanswer" class="inputclass" placeholder="الإجابة الصحيحة" required></input>
+					<input id="falseanswer1" class="inputclass" placeholder="إجابة خاطئة" required></input>
+					<input id="falseanswer2" class="inputclass" placeholder="إجابة خاطئة" required></input>
+					<input id="falseanswer3" class="inputclass" placeholder="إجابة خاطئة" required></input>	
+				</form>
+			</div>
 		</div>
 		<div id="options" class="options" style="display:none;">
 			<img id="back" class="back" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
@@ -145,7 +442,8 @@
 			<img id="truefullscreen" class="truefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B5%D8%AD.png"></img>			<img id="falsefullscreen" class="falsefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%AE%D8%B7%D8%A3.png"></img>				
 			
 		</div>
-		<div id="socialMedia" class="socialMedia">
+		<div id="whous" class="whous" style="display:none;">
+			<img id="whousback" class="whousback" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
 		</div>
 		
 <!--	<script>
@@ -176,16 +474,59 @@ body.addEventListener('mouseup', function() {
 	var mainmenu = document.getElementById('mainmenu');	
 	var Boxb = document.getElementById('Boxb');
 	var	gameplay = document.getElementById('gameplay');
+	var	backgameplay = document.getElementById('backgameplay');
+	var	optionsgameplay = document.getElementById('optionsgameplay');
+	var	optionsGPslide = document.getElementById('optionsGPslide');
+	let clickCount = 0;
 	document.getElementById('startbutton').onclick = function() {
 		mainmenu.style.display = 'none';
 		Boxb.style.display = 'none';		
 		buttonSound.play();
-		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/Accounting%20Service%20Website%20in%20Yellow%20Dark%20Brown%20Illustrative%20Style%20(4).png') 0% 0% / 100vw 100vh no-repeat";
+		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D9%85%D8%B2%D8%AE%D8%B1%D9%81%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
 		gameplay.style.display = '';
 	}
+	document.getElementById('backgameplay').onclick = function() {
+		mainmenu.style.display = '';
+		Boxb.style.display = 'flex';		
+		buttonSound.play();
+		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
+		gameplay.style.display = 'none';
+		optionsGPslide.style.height = '0vh';
+		clickCount++;
+	}
+	document.getElementById('optionsgameplay').addEventListener('click', function () {
+		clickCount++;
+		if (clickCount % 2 === 0) {
+			buttonSound.play();
+			optionsGPslide.style.height = '0vh';
+		}else {
+			buttonSound.play();
+			optionsGPslide.style.height = '20vh';
+		}
+	});
 	</script>
 <!-- إعداد الأسئلة -->
 	<script>
+	var editingbutton = document.getElementById('editingbutton');
+	var mainmenu = document.getElementById('mainmenu');	
+	var Boxb = document.getElementById('Boxb');	
+	var buttonSound = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.mp3');
+	var editingback = document.getElementById('editingback');
+	var editing = document.getElementById('editing');
+	editing
+	document.getElementById('editingbutton').onclick = function() {
+		buttonSound.play();
+		editing.style.display = '';
+		mainmenu.style.display = 'none';
+		Boxb.style.display = 'none';
+	}
+	document.getElementById('editingback').onclick = function() {
+		mainmenu.style.display = '';
+		Boxb.style.display = 'flex';		
+		buttonSound.play();
+		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
+		editing.style.display = 'none';
+	}
 	</script>
 <!-- الضبط -->
 	<script>
@@ -239,6 +580,25 @@ body.addEventListener('mouseup', function() {
 	</script>
 <!-- مَن نَحن -->	
 	<script>
+	var usbutton = document.getElementById('usbutton');
+	var mainmenu = document.getElementById('mainmenu');	
+	var Boxb = document.getElementById('Boxb');	
+	var buttonSound = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.mp3');
+	var whousback = document.getElementById('whousback');
+	var whous = document.getElementById('whous');
+	document.getElementById('usbutton').onclick = function() {
+		buttonSound.play();
+		whous.style.display = '';
+		mainmenu.style.display = 'none';
+		Boxb.style.display = 'none';
+	}
+	document.getElementById('whousback').onclick = function() {
+		mainmenu.style.display = '';
+		Boxb.style.display = 'flex';		
+		buttonSound.play();
+		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
+		whous.style.display = 'none';
+	}
 	</script>
 	</body>
 </html>
