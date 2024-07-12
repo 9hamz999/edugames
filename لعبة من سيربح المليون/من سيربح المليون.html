@@ -153,8 +153,8 @@
 			.answertext1 {
 			word-spacing: -0.2vw;
 			position: absolute;
-			top: 55.5vh;
-			left: 25.5vw;
+			top: 55vh;
+			left: 24vw;
 			height: 10vh;
 			width: 14vw;
 			direction: rtl;
@@ -162,14 +162,20 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			padding: 1vh 8vw 1vh 2vw;
 			margin: 0;
 			text-align: justify;
+			border-radius: 3vh;
 			}
+			.answertext1:hover {
+			background: #00000029;
+			transition: 0.25s;			
+			}			
 			.answertext2 {
 			word-spacing: -0.2vw;
 			position: absolute;
-			top: 55.5vh;
-			left: -0.5vw;
+			top: 55vh;
+			left: -2vw;
 			height: 10vh;
 			width: 14vw;
 			direction: rtl;
@@ -177,14 +183,20 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			padding: 1vh 8vw 1vh 2vw;
 			margin: 0;
 			text-align: justify;
+			border-radius: 3vh;
+			}
+			.answertext2:hover {
+			background: #00000029;
+			transition: 0.25s;			
 			}
 			.answertext3 {
 			word-spacing: -0.2vw;
 			position: absolute;
-			top: 69.5vh;
-			left: 25.5vw;
+			top: 69vh;
+			left: 24vw;
 			height: 10vh;
 			width: 14vw;
 			direction: rtl;
@@ -192,14 +204,21 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			text-align: justify;
+			padding: 1vh 8vw 1vh 2vw;
 			margin: 0;
 			text-align: justify;
-			}	
+			border-radius: 3vh;			
+			}
+			.answertext3:hover {
+			background: #00000029;
+			transition: 0.25s;			
+			}
 			.answertext4 {
 			word-spacing: -0.2vw;
 			position: absolute;
-			top: 69.5vh;
-			left: -0.5vw;
+			top: 69vh;
+			left: -2vw;
 			height: 10vh;
 			width: 14vw;
 			direction: rtl;
@@ -207,9 +226,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			padding: 1vh 8vw 1vh 2vw;
 			margin: 0;
 			text-align: justify;
-			}	
+			border-radius: 3vh;
+			}
+			.answertext4:hover {
+			background: #00000029;
+			transition: 0.25s;
+			}
 			.answernum1 {
 			word-spacing: -0.2vw;
 			position: absolute;
@@ -360,12 +385,14 @@
 			}
 			.formdiv {
 			direction: rtl;
-			height: 100vh;
+			height: 78vh;
 			width: 100vw;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
+			overflow-y: scroll;
+			scrollbar-width: auto;
 			}
 			.questionsform {
 			text-align: center;
@@ -375,6 +402,7 @@
 			border: solid 0.3vh #0000006e;
 			border-radius: 1vh;
 			margin-bottom: 1vh;
+			background: #ffffffb5;
 			}
 			.answerinput {
 			font-size: 2vw;
@@ -384,6 +412,24 @@
 			font-size: 2vw;
 			font-family: Tajawal;
 			width: 15vw;
+			}
+			.editingbuttons {
+			position: absolute;
+			height: 7vh;
+			width: 82.5vw;
+			background: #a5a8ab4d;
+			left: 9vw;
+			border-radius: 1vh;
+			display: flex;
+			justify-content: center;
+			direction: rtl;
+			}
+			.editingbuttonsclass {
+			margin: 0.5vh 1vw .5vh 1vw;
+			}
+			.editingbuttonsclass:hover {
+			margin: 0.25vh 1.25vw 0.25vh 1.25vw;
+			transition: 0.25s;	
 			}
 			
 		</style>
@@ -409,31 +455,37 @@
 				<img id="questionbox1" class="questionbox1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9.png"></img>
 				<p id="textquestions" class="textquestions">هذا نصّ تجريبي لسؤال تجريبي، قل لي ما رأيك؟</p>
 				<img id="answerbox1" class="answerbox1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
-				<p id="answertext1" class="answertext1">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
 				<p id="answernum1" class="answernum1">أ</p>
+				<p id="answertext1" class="answertext1">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
 				<img id="answerbox2" class="answerbox2" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
-				<p id="answertext2" class="answertext2">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
 				<p id="answernum2" class="answernum2">ب</p>
+				<p id="answertext2" class="answertext2">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
 				<img id="answerbox3" class="answerbox3" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
-				<p id="answertext3" class="answertext3">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
-				<p id="answernum3" class="answernum3">جـ</p>				
+				<p id="answernum3" class="answernum3">جـ</p>
+				<p id="answertext3" class="answertext3">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>			
 				<img id="answerbox4" class="answerbox4" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9.png" ></img>
-				<p id="answertext4" class="answertext4">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>
-				<p id="answernum4" class="answernum4">د</p>				
+				<p id="answernum4" class="answernum4">د</p>
+				<p id="answertext4" class="answertext4">هذا نص تجريبي لإجاية تجريبية، قل لي ما رأيك؟</p>			
 			</div>
 		</div>
 		<div id="editing" class="editing" style="display:none;">
 			<img id="editingback" class="editingback" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
 			<div id="formdiv" class="formdiv">
-				<form id="questionsform" class="questionsform">
-					<label for="answerinput">السؤال</label>
-					<input id="answerinput" class="answerinput" required></input>
+				<form id="questionsform1" class="questionsform">
+					<label for="answerinput1">السؤال (1)</label>
+					<input id="answerinput1" class="answerinput" required></input>
 					<br></br>
-					<input id="trueanswer" class="inputclass" placeholder="الإجابة الصحيحة" required></input>
-					<input id="falseanswer1" class="inputclass" placeholder="إجابة خاطئة" required></input>
-					<input id="falseanswer2" class="inputclass" placeholder="إجابة خاطئة" required></input>
-					<input id="falseanswer3" class="inputclass" placeholder="إجابة خاطئة" required></input>	
-				</form>
+					<input id="trueanswer1" class="inputclass" placeholder="الإجابة الصحيحة" required></input>
+					<input id="falsea1nswer1" class="inputclass" placeholder="إجابة خاطئة" required></input>
+					<input id="falsea2nswer1" class="inputclass" placeholder="إجابة خاطئة" required></input>
+					<input id="falsea3nswer1" class="inputclass" placeholder="إجابة خاطئة" required></input>	
+				</form>					
+			</div>
+			<div id="editingbuttons" class="editingbuttons">
+				<img title="إضافة سؤال" id="addquestion" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%A5%D8%B6%D8%A7%D9%81%D8%A9%20%D8%B3%D8%A4%D8%A7%D9%84.png"></img>
+				<img title="تحميل النموذج لاستخدامه مرّة أخرى" id="dwonloadquestions" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%AA%D8%AD%D9%85%D9%8A%D9%84%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png"></img>
+				<img title="استخدام نموذج تم تحميله مسبقًا" id="importquestions" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%A7%D8%B3%D8%AA%D9%8A%D8%B1%D8%A7%D8%AF%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png"></img>
+				<img title="حفظ النموذج الحالي لاستخدامه في اللعبة" id="savequestions" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%AD%D9%81%D8%B8%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png"></img>
 			</div>
 		</div>
 		<div id="options" class="options" style="display:none;">
@@ -509,11 +561,18 @@ body.addEventListener('mouseup', function() {
 	<script>
 	var editingbutton = document.getElementById('editingbutton');
 	var mainmenu = document.getElementById('mainmenu');	
-	var Boxb = document.getElementById('Boxb');	
+	var Boxb = document.getElementById('Boxb');
+	var answertexts1 = document.getElementById('answertext1');
+	var answertexts2 = document.getElementById('answertext2');	
+	var answertexts3 = document.getElementById('answertext3');	
+	var answertexts4 = document.getElementById('answertext4');		
+	var correct = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%B5%D8%AD%D9%8A%D8%AD%D8%A9.mp3');
+	var gameover = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%AE%D8%B7%D8%A3.mp3');	
 	var buttonSound = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.mp3');
 	var editingback = document.getElementById('editingback');
 	var editing = document.getElementById('editing');
-	editing
+	var addquestion = document.getElementById('addquestion');	
+
 	document.getElementById('editingbutton').onclick = function() {
 		buttonSound.play();
 		editing.style.display = '';
@@ -527,13 +586,265 @@ body.addEventListener('mouseup', function() {
 		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
 		editing.style.display = 'none';
 	}
+	let formCount = 1;
+	document.getElementById('addquestion').addEventListener('click', () => {
+	formCount++;
+  const newForm = document.createElement('form');
+  newForm.id = `questionsform${formCount}`;
+  newForm.className = 'questionsform';
+
+  const label = document.createElement('label');
+  label.htmlFor = `answerinput${formCount}`;
+  label.textContent = 'السؤال' + "(" + formCount + ")" + " ";
+  newForm.appendChild(label);
+
+  const answerInput = document.createElement('input');
+  answerInput.id = `answerinput${formCount}`;
+  answerInput.className = 'answerinput';
+  answerInput.required = true;
+  newForm.appendChild(answerInput);
+
+  newForm.appendChild(document.createElement('br'));
+  newForm.appendChild(document.createElement('br'));  
+
+  const trueAnswer = document.createElement('input');
+  trueAnswer.id = `trueanswer${formCount}`;
+  trueAnswer.className = 'inputclass';
+  trueAnswer.placeholder = 'الإجابة الصحيحة';
+  trueAnswer.required = true;
+  newForm.appendChild(trueAnswer);
+
+  for (let i = 1; i <= 3; i++) {
+    const falseAnswer = document.createElement('input');
+    falseAnswer.id = `falsea${i}nswer${formCount}`;
+    falseAnswer.className = 'inputclass';
+    falseAnswer.placeholder = 'إجابة خاطئة';
+    falseAnswer.required = true;
+    newForm.appendChild(falseAnswer);
+  }
+  buttonSound.play();
+  document.getElementById('formdiv').appendChild(newForm);
+	});
+	let questionCount = 1;
+	document.getElementById('savequestions').addEventListener('click', () => {	
+    var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];
+	});	
+
+	document.getElementById('answertext1').addEventListener('click', () => {
+	var answertexth1 = document.getElementById("answertext1").innerHTML;
+	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+		if (answertexth1 === trueanswer ) {
+		correct.play();
+		answertexts1.style.background = '#4caf5066';
+		questionCount++;
+    var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];		
+		} else {
+		answertexts1.style.background = '#ff000052';
+		gameover.play();
+		console.log("خطأ");
+		}
+	});
+	document.getElementById('answertext2').addEventListener('click', () => {
+	var answertexth2 = document.getElementById("answertext2").innerHTML;
+	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+		if (answertexth2 === trueanswer ) {
+		correct.play();
+		answertexts2.style.background = '#4caf5066';
+		questionCount++;
+    var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];		
+		} else {
+		answertexts2.style.background = '#ff000052';
+		gameover.play();
+		}
+	});
+	document.getElementById('answertext3').addEventListener('click', () => {
+	var answertexth3 = document.getElementById("answertext3").innerHTML;
+	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+		if (answertexth3 === trueanswer ) {
+		correct.play();
+		answertexts3.style.background = '#4caf5066';
+		questionCount++;
+    var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];		
+		} else {
+		answertexts3.style.background = '#ff000052';
+		gameover.play();
+		}
+	});
+	document.getElementById('answertext4').addEventListener('click', () => {
+	var answertexth4 = document.getElementById("answertext4").innerHTML;
+	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+		if (answertexth4 === trueanswer ) {
+		correct.play();
+		answertexts4.style.background = '#4caf5066';
+		questionCount++;
+    var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];		
+		} else {
+		answertexts4.style.background = '#ff000052';
+		gameover.play();
+		}
+	});	
 	</script>
 <!-- الضبط -->
 	<script>
 	var elem = document.documentElement;
 	var Boxb = document.getElementById('Boxb');
 	var	options = document.getElementById('options');
-	var	back = document.getElementById('back');	
+	var	back = document.getElementById('back');
 	var buttonSound = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.mp3');
 	var truefullscreen = document.getElementById('truefullscreen');	
 	var falsefullscreen = document.getElementById('falsefullscreen');	
@@ -575,8 +886,8 @@ body.addEventListener('mouseup', function() {
 		}
 		truefullscreen.style.background = '#00000000';
 		falsefullscreen.style.background = '#00000030';
-		
-	}		
+	}
+	
 	</script>
 <!-- مَن نَحن -->	
 	<script>
