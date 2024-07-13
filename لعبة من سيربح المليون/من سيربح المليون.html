@@ -120,7 +120,7 @@
 			align-items: center;
 			justify-content: center;
 			margin: 0;
-			text-align: justify;
+			text-align: justify;			
 			}
 			.answerbox1 {
 			position: absolute;
@@ -431,7 +431,169 @@
 			margin: 0.25vh 1.25vw 0.25vh 1.25vw;
 			transition: 0.25s;	
 			}
-			
+			@keyframes textquestions {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#textquestions.rotate {
+			animation: textquestions;
+			}
+			@keyframes textquestions1 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#textquestions.rotate {
+			animation: textquestions1;			
+			}
+			@keyframes answertext1 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext1.rotate {
+			animation: answertext1;
+			}
+			@keyframes answertext12 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext2.rotate {
+			animation: answertext12;			
+			}
+			@keyframes answertext2 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext2.rotate {
+			animation: answertext2;
+			}
+			@keyframes answertext22 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext2.rotate {
+			animation: answertext22;			
+			}
+			@keyframes answertext3 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext3.rotate {
+			animation: answertext3;
+			}
+			@keyframes answertext32 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext3.rotate {
+			animation: answertext32;			
+			}
+			@keyframes answertext4 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext4.rotate {
+			animation: answertext4;
+			}
+			@keyframes answertext42 {
+				0%{
+					color: black;
+				}
+				50% {
+					color: transparent;
+				}
+				100% {
+					color: black;
+				}				
+			}
+			#answertext4.rotate {
+			animation: answertext42;			
+			}
+			.line-container {
+			width: 43vw;
+			height: 6vh;
+			position: absolute;
+			top: 3vh;
+			left: 28vw;
+			border-bottom: solid #eec439 0.1vh;
+			}
+			.point {
+			position: absolute;
+			height: 6vh;
+			width: 4vw;
+			left: 0;
+			transition: left 2s ease;
+			}			
+			.lastline {
+			position: absolute;
+			margin-top: 1vh;
+			height: 5vh;
+			width: 3vw;
+			left: 93%;			
+			}			
+
 		</style>
 	</head>
 	<body id="body" class="body" style='background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png) no-repeat; background-size: 100vw 100vh;'>
@@ -446,6 +608,10 @@
 				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D9%85%D9%86%20%D9%86%D8%AD%D9%86.png" id="usbutton" class="usbutton"></img>	
 			</div>
 		<div id="gameplay" class="gameplay" style="display:none;">
+		  <div class="line-container">
+			<img class="point" id="point" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/point.png"></img>
+			<img class="lastline" id="lastline" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/lastline.png"></img>			
+		  </div>
 			<img id="optionsgameplay" class="optionsgameplay" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA.png"></img>
 			<div id="optionsGPslide" class="optionsGPslide" style="height: 0vh;">
 			<img id="backgameplay" class="backgameplay" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
@@ -568,6 +734,7 @@ body.addEventListener('mouseup', function() {
 	var answertexts4 = document.getElementById('answertext4');		
 	var correct = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%B5%D8%AD%D9%8A%D8%AD%D8%A9.mp3');
 	var gameover = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%AE%D8%B7%D8%A3.mp3');	
+	var voice1 = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89%20%D8%B9%D8%AC%D9%88%D8%B2.mp3');	
 	var buttonSound = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1.mp3');
 	var editingback = document.getElementById('editingback');
 	var editing = document.getElementById('editing');
@@ -660,14 +827,87 @@ body.addEventListener('mouseup', function() {
     document.getElementById("answertext3").innerHTML = answers[2];
     document.getElementById("answertext4").innerHTML = answers[3];
 	});	
-
+	var path1 = [
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running textquestions'},
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running textquestions1'}
+    ];
+	var path2 = [
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext1'},
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext12'}
+    ];
+	var path3 = [
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext2'},
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext22'}
+    ];
+	var path4 = [
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext3'},
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext32'}
+    ];
+	var path5 = [
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext4'},
+        {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext42'}
+    ];	
+	currentPosition = 0;
+	Positionnum = 1;
+const point = document.getElementById('point');
 	document.getElementById('answertext1').addEventListener('click', () => {
 	var answertexth1 = document.getElementById("answertext1").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth1 === trueanswer ) {
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
+		console.log(formCount);
+		console.log(stationWidthPercentage);
 		correct.play();
 		answertexts1.style.background = '#4caf5066';
+            if (currentPosition < path1.length - 1) {
+                currentPosition++;
+				textquestions.style.animation = path1[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				textquestions.style.animation = path1[currentPosition].animation;
+            }
+            if (currentPosition < path2.length - 1) {
+                currentPosition++;
+				answertext1.style.animation = path2[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext1.style.animation = path2[currentPosition].animation;
+            }
+            if (currentPosition < path3.length - 1) {
+                currentPosition++;
+				answertext2.style.animation = path3[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext2.style.animation = path3[currentPosition].animation;
+            }
+            if (currentPosition < path4.length - 1) {
+                currentPosition++;
+				answertext3.style.animation = path4[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext3.style.animation = path4[currentPosition].animation;
+            }
+            if (currentPosition < path5.length - 1) {
+                currentPosition++;
+				answertext4.style.animation = path5[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext4.style.animation = path5[currentPosition].animation;
+            }		
+		setTimeout(function() {
+		answertexts1.style.background = '';
+		}, 1000);
+		setTimeout(function() {		
+	
 		questionCount++;
+
     var textquestions  = document.getElementById('textquestions').innerHTML;
     var answertext1  = document.getElementById('answertext1').innerHTML;
     var answertext2  = document.getElementById('answertext2').innerHTML;
@@ -699,19 +939,69 @@ body.addEventListener('mouseup', function() {
     document.getElementById("answertext1").innerHTML = answers[0];	
     document.getElementById("answertext2").innerHTML = answers[1];
     document.getElementById("answertext3").innerHTML = answers[2];
-    document.getElementById("answertext4").innerHTML = answers[3];		
+    document.getElementById("answertext4").innerHTML = answers[3];
+		}, 2000);	
 		} else {
 		answertexts1.style.background = '#ff000052';
 		gameover.play();
-		console.log("خطأ");
+		setTimeout(function() {
+		answertexts1.style.background = '';
+		}, 1000);
 		}
 	});
 	document.getElementById('answertext2').addEventListener('click', () => {
 	var answertexth2 = document.getElementById("answertext2").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth2 === trueanswer ) {
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;		
 		correct.play();
 		answertexts2.style.background = '#4caf5066';
+            if (currentPosition < path1.length - 1) {
+                currentPosition++;
+				textquestions.style.animation = path1[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				textquestions.style.animation = path1[currentPosition].animation;
+            }
+            if (currentPosition < path2.length - 1) {
+                currentPosition++;
+				answertext1.style.animation = path2[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext1.style.animation = path2[currentPosition].animation;
+            }
+            if (currentPosition < path3.length - 1) {
+                currentPosition++;
+				answertext2.style.animation = path3[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext2.style.animation = path3[currentPosition].animation;
+            }
+            if (currentPosition < path4.length - 1) {
+                currentPosition++;
+				answertext3.style.animation = path4[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext3.style.animation = path4[currentPosition].animation;
+            }
+            if (currentPosition < path5.length - 1) {
+                currentPosition++;
+				answertext4.style.animation = path5[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext4.style.animation = path5[currentPosition].animation;
+            }	
+		setTimeout(function() {
+		answertexts2.style.background = '';
+		}, 1000);
+		setTimeout(function() {		
 		questionCount++;
     var textquestions  = document.getElementById('textquestions').innerHTML;
     var answertext1  = document.getElementById('answertext1').innerHTML;
@@ -744,18 +1034,69 @@ body.addEventListener('mouseup', function() {
     document.getElementById("answertext1").innerHTML = answers[0];	
     document.getElementById("answertext2").innerHTML = answers[1];
     document.getElementById("answertext3").innerHTML = answers[2];
-    document.getElementById("answertext4").innerHTML = answers[3];		
+    document.getElementById("answertext4").innerHTML = answers[3];	
+		}, 2000);		
 		} else {
 		answertexts2.style.background = '#ff000052';
 		gameover.play();
+		setTimeout(function() {
+		answertexts2.style.background = '';
+		}, 1000);
 		}
 	});
 	document.getElementById('answertext3').addEventListener('click', () => {
 	var answertexth3 = document.getElementById("answertext3").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth3 === trueanswer ) {
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
 		correct.play();
 		answertexts3.style.background = '#4caf5066';
+            if (currentPosition < path1.length - 1) {
+                currentPosition++;
+				textquestions.style.animation = path1[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				textquestions.style.animation = path1[currentPosition].animation;
+            }
+            if (currentPosition < path2.length - 1) {
+                currentPosition++;
+				answertext1.style.animation = path2[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext1.style.animation = path2[currentPosition].animation;
+            }
+            if (currentPosition < path3.length - 1) {
+                currentPosition++;
+				answertext2.style.animation = path3[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext2.style.animation = path3[currentPosition].animation;
+            }
+            if (currentPosition < path4.length - 1) {
+                currentPosition++;
+				answertext3.style.animation = path4[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext3.style.animation = path4[currentPosition].animation;
+            }
+            if (currentPosition < path5.length - 1) {
+                currentPosition++;
+				answertext4.style.animation = path5[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext4.style.animation = path5[currentPosition].animation;
+            }	
+		setTimeout(function() {
+		answertexts3.style.background = '';
+		}, 1000);
+		setTimeout(function() {
 		questionCount++;
     var textquestions  = document.getElementById('textquestions').innerHTML;
     var answertext1  = document.getElementById('answertext1').innerHTML;
@@ -789,18 +1130,69 @@ body.addEventListener('mouseup', function() {
     document.getElementById("answertext2").innerHTML = answers[1];
     document.getElementById("answertext3").innerHTML = answers[2];
     document.getElementById("answertext4").innerHTML = answers[3];		
+		}, 2000);	
 		} else {
 		answertexts3.style.background = '#ff000052';
 		gameover.play();
+		setTimeout(function() {
+		answertexts3.style.background = '';
+		}, 1000);
 		}
 	});
 	document.getElementById('answertext4').addEventListener('click', () => {
 	var answertexth4 = document.getElementById("answertext4").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth4 === trueanswer ) {
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
 		correct.play();
 		answertexts4.style.background = '#4caf5066';
+            if (currentPosition < path1.length - 1) {
+                currentPosition++;
+				textquestions.style.animation = path1[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				textquestions.style.animation = path1[currentPosition].animation;
+            }
+            if (currentPosition < path2.length - 1) {
+                currentPosition++;
+				answertext1.style.animation = path2[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext1.style.animation = path2[currentPosition].animation;
+            }
+            if (currentPosition < path3.length - 1) {
+                currentPosition++;
+				answertext2.style.animation = path3[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext2.style.animation = path3[currentPosition].animation;
+            }
+            if (currentPosition < path4.length - 1) {
+                currentPosition++;
+				answertext3.style.animation = path4[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext3.style.animation = path4[currentPosition].animation;
+            }
+            if (currentPosition < path5.length - 1) {
+                currentPosition++;
+				answertext4.style.animation = path5[currentPosition].animation;
+
+            } else {
+                currentPosition = 0;
+				answertext4.style.animation = path5[currentPosition].animation;
+            }	
 		questionCount++;
+		setTimeout(function() {
+		answertexts4.style.background = '';
+		}, 1000);
+		setTimeout(function() {
     var textquestions  = document.getElementById('textquestions').innerHTML;
     var answertext1  = document.getElementById('answertext1').innerHTML;
     var answertext2  = document.getElementById('answertext2').innerHTML;
@@ -832,12 +1224,19 @@ body.addEventListener('mouseup', function() {
     document.getElementById("answertext1").innerHTML = answers[0];	
     document.getElementById("answertext2").innerHTML = answers[1];
     document.getElementById("answertext3").innerHTML = answers[2];
-    document.getElementById("answertext4").innerHTML = answers[3];		
+    document.getElementById("answertext4").innerHTML = answers[3];
+		}, 2000);	
 		} else {
 		answertexts4.style.background = '#ff000052';
 		gameover.play();
-		}
-	});	
+		setTimeout(function() {
+		answertexts4.style.background = '';
+		}, 1000);
+		
+		}	
+	});
+	
+	questionCount
 	</script>
 <!-- الضبط -->
 	<script>
