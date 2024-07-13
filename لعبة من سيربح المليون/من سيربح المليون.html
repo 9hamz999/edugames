@@ -9,6 +9,7 @@
 			.body {
 			font-family: Tajawal;
 			height: 100vh;
+			width: 100vw;
 			margin: 0;
 			padding: 0;
 			align-content: center;
@@ -20,9 +21,11 @@
 			user-select: none;
 			}
 			.mainmenu {
-			width: 100%;
+			height: 100vh;
+			width: 100vw;
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			align-items: center;
 			}
 			.logo {
@@ -592,12 +595,129 @@
 			height: 5vh;
 			width: 3vw;
 			left: 93%;			
-			}			
-
+			}
+			.alnatija {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			z-index: 2;
+			background: #000000c2;		
+			}
+			.alnatijas {
+			word-spacing: -0.2vw;
+			position: absolute;
+			direction: rtl;
+			font-size: 3vw;
+			text-align: justify;
+			padding: 8vh;
+			border-radius: 5vh;
+			background: #fffffff2;
+			}
+			.alnatijafalse {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			z-index: 2;
+			background: #000000c2;		
+			}
+			.alnatijafalses {
+			word-spacing: -0.2vw;
+			position: absolute;
+			direction: rtl;
+			font-size: 3vw;
+			text-align: justify;
+			padding: 8vh;
+			border-radius: 5vh;
+			background: #f44336b5;
+			color: white;
+			}
+			.winnerdiv {
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			z-index: 3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: white;
+			}
+			.winnerboy {
+			position: absolute;
+			}
+			.winnerback {
+			position: absolute;
+			height: 100vh;
+			width: 100vw;
+			}
+			.winnertext {
+			word-spacing: -0.2vw;
+			position: absolute;
+			direction: rtl;
+			font-size: 3vw;
+			text-align: justify;
+			padding: 8vh;
+			border-radius: 5vh;
+			background: #4caf50bf;
+			color: white;
+			}
+			@keyframes winnerback {
+				0%{
+					background: #ffeb3b;
+				}
+				100% {
+					background: #ffeb3b00;;
+				}				
+			}
+			#winnerback.rotate {
+			animation: winnerback;
+			}
+			@keyframes winnerback1 {
+				0%{
+					background: #ffeb3b;
+				}
+				100% {
+					background: #ffeb3b00;;
+				}	
+			}
+			#winnerback.rotate {
+			animation: winnerback1;			
+			}
+			.pleaseaddquestions {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #000000ad;
+			z-index: 4;
+			}
+			.pleaseaddquestions1 {
+			word-spacing: -0.2vw;
+			position: absolute;
+			direction: rtl;
+			font-size: 3vw;
+			text-align: justify;
+			padding: 8vh;
+			border-radius: 5vh;
+			background: #ffffff;
+			color: black;
+			}
 		</style>
 	</head>
 	<body id="body" class="body" style='background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png) no-repeat; background-size: 100vw 100vh;'>
 		<div id="mainmenu" class="mainmenu">
+			<div id="pleaseaddquestions" class="pleaseaddquestions" style="display:none;">
+				<p id="pleaseaddquestions1" class="pleaseaddquestions1">يرجى إضافة الأسئلة</p>
+			</div>
 			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/logo%201.png" id="logo" class="logo"></img>
 			<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D9%85%D8%B1%D8%A8%D8%B9%20%D8%AE%D9%84%D9%81%D9%8A%D8%A9.png" id="buttonBox" class="buttonBox"></img>
 		</div>
@@ -608,6 +728,20 @@
 				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/3d/%D9%85%D9%86%20%D9%86%D8%AD%D9%86.png" id="usbutton" class="usbutton"></img>	
 			</div>
 		<div id="gameplay" class="gameplay" style="display:none;">
+			<div id="winnerdiv" class="winnerdiv" style="display:none;">
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D9%86%D9%82%D9%88%D8%AF%20%D8%A7%D9%84%D9%81%D9%88%D8%B2.gif" id="coins" class="coins"></img>
+				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D9%88%D9%84%D8%AF%20%D8%A7%D9%84%D9%81%D9%88%D8%B2.png" id="winnerboy" class="winnerboy"></img>
+				<p id="winnertext" class="winnertext">أحسنت لقد فزت!</p>
+				<div id="winnerback" class="winnerback"></div>
+			</div>
+			
+			
+		  <div id="alnatija" class="alnatija" style="display:none;">
+		  <p id ="alnatijas" class="alnatijas">تمّت إعادة اللعبة بنجاح.</p>
+		  </div>
+		  <div id="alnatijafalse" class="alnatijafalse" style="display:none;">
+		  <p id ="alnatijafalses" class="alnatijafalses">لقد خَسِرت...</p>
+		  </div>		  
 		  <div class="line-container">
 			<img class="point" id="point" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/point.png"></img>
 			<img class="lastline" id="lastline" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/lastline.png"></img>			
@@ -695,13 +829,26 @@ body.addEventListener('mouseup', function() {
 	var	backgameplay = document.getElementById('backgameplay');
 	var	optionsgameplay = document.getElementById('optionsgameplay');
 	var	optionsGPslide = document.getElementById('optionsGPslide');
+	var pleaseaddquestions = document.getElementById('pleaseaddquestions');
+	let formCount = 1;
 	let clickCount = 0;
 	document.getElementById('startbutton').onclick = function() {
+	
+		if (formCount === 1) {
+		pleaseaddquestions.style.display = ''; 
+		buttonSound.play();
+			document.getElementById('pleaseaddquestions').onclick = function() {
+			pleaseaddquestions.style.display = 'none'; 
+			buttonSound.play();
+			}
+		} else {
+		
 		mainmenu.style.display = 'none';
 		Boxb.style.display = 'none';		
 		buttonSound.play();
 		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D9%85%D8%B2%D8%AE%D8%B1%D9%81%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
 		gameplay.style.display = '';
+		}
 	}
 	document.getElementById('backgameplay').onclick = function() {
 		mainmenu.style.display = '';
@@ -722,16 +869,19 @@ body.addEventListener('mouseup', function() {
 			optionsGPslide.style.height = '20vh';
 		}
 	});
-	</script>
+
 <!-- إعداد الأسئلة -->
-	<script>
+
 	var editingbutton = document.getElementById('editingbutton');
 	var mainmenu = document.getElementById('mainmenu');	
 	var Boxb = document.getElementById('Boxb');
 	var answertexts1 = document.getElementById('answertext1');
 	var answertexts2 = document.getElementById('answertext2');	
 	var answertexts3 = document.getElementById('answertext3');	
-	var answertexts4 = document.getElementById('answertext4');		
+	var answertexts4 = document.getElementById('answertext4');
+	var alnatijafalse = document.getElementById('alnatijafalse');
+	var winnerdiv = document.getElementById('winnerdiv');	
+	var winnermusic = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D9%85%D9%88%D8%B3%D9%8A%D9%82%D9%89%20%D8%A7%D9%84%D9%81%D9%88%D8%B2.mp3');
 	var correct = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%B5%D8%AD%D9%8A%D8%AD%D8%A9.mp3');
 	var gameover = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%AE%D8%B7%D8%A3.mp3');	
 	var voice1 = new Audio('https://github.com/9hamz999/edugames/raw/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D8%A7%D8%AA/gameplay/%D8%A8%D8%B9%D8%AF%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89%20%D8%B9%D8%AC%D9%88%D8%B2.mp3');	
@@ -753,7 +903,6 @@ body.addEventListener('mouseup', function() {
 		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
 		editing.style.display = 'none';
 	}
-	let formCount = 1;
 	document.getElementById('addquestion').addEventListener('click', () => {
 	formCount++;
   const newForm = document.createElement('form');
@@ -794,6 +943,7 @@ body.addEventListener('mouseup', function() {
 	});
 	let questionCount = 1;
 	document.getElementById('savequestions').addEventListener('click', () => {	
+	buttonSound.play();
     var textquestions  = document.getElementById('textquestions').innerHTML;
     var answertext1  = document.getElementById('answertext1').innerHTML;
     var answertext2  = document.getElementById('answertext2').innerHTML;
@@ -846,14 +996,41 @@ body.addEventListener('mouseup', function() {
 	var path5 = [
         {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext4'},
         {animation:'4s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running answertext42'}
-    ];	
+    ];
+	var path6 = [
+        {animation:'1s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running winnerback'},
+        {animation:'1s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running winnerback1'}	
+	]
 	currentPosition = 0;
-	Positionnum = 1;
+	 let Positionnum = 1;
 const point = document.getElementById('point');
 	document.getElementById('answertext1').addEventListener('click', () => {
 	var answertexth1 = document.getElementById("answertext1").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth1 === trueanswer ) {
+			if (formCount === questionCount) {
+				setTimeout(function() {
+				winnerdiv.style.display = '';
+				winnermusic.play();
+				    if (currentPosition < path6.length - 1) {
+						currentPosition++;
+						winnerback.style.animation = path6[currentPosition].animation;
+
+					} else {
+						currentPosition = 0;
+						winnerback.style.animation = path6[currentPosition].animation;
+					}
+					document.getElementById('winnerback').onclick = function() {
+					winnerdiv.style.display= 'none';
+					buttonSound.play();
+					}
+				}, 1800);
+
+			}
+			
+			
+			
+			
 		const stationWidthPercentage = 83 / formCount;
 		point.style.left = `${Positionnum * stationWidthPercentage}%`;
 		Positionnum++;
@@ -945,7 +1122,50 @@ const point = document.getElementById('point');
 		answertexts1.style.background = '#ff000052';
 		gameover.play();
 		setTimeout(function() {
+		alnatijafalse.style.display = 'flex';
+			document.getElementById('alnatijafalse').onclick = function() {
+			alnatijafalse.style.display= 'none';
+			buttonSound.play();
+			}
 		answertexts1.style.background = '';
+		Positionnum = 0;
+		questionCount = 1;
+		buttonSound.play();
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
+  var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];		
 		}, 1000);
 		}
 	});
@@ -953,6 +1173,29 @@ const point = document.getElementById('point');
 	var answertexth2 = document.getElementById("answertext2").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth2 === trueanswer ) {
+			if (formCount === questionCount) {
+				setTimeout(function() {
+				winnerdiv.style.display = '';
+				winnermusic.play();
+				    if (currentPosition < path6.length - 1) {
+						currentPosition++;
+						winnerback.style.animation = path6[currentPosition].animation;
+
+					} else {
+						currentPosition = 0;
+						winnerback.style.animation = path6[currentPosition].animation;
+					}
+					document.getElementById('winnerback').onclick = function() {
+					winnerdiv.style.display= 'none';
+					buttonSound.play();
+					}
+				}, 1800);
+
+			}
+			
+			
+			
+			
 		const stationWidthPercentage = 83 / formCount;
 		point.style.left = `${Positionnum * stationWidthPercentage}%`;
 		Positionnum++;		
@@ -1040,7 +1283,50 @@ const point = document.getElementById('point');
 		answertexts2.style.background = '#ff000052';
 		gameover.play();
 		setTimeout(function() {
+		alnatijafalse.style.display = 'flex';
+			document.getElementById('alnatijafalse').onclick = function() {
+			alnatijafalse.style.display= 'none';
+			buttonSound.play();
+			}
 		answertexts2.style.background = '';
+		Positionnum = 0;
+		questionCount = 1;
+		buttonSound.play();
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
+  var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];		
 		}, 1000);
 		}
 	});
@@ -1048,6 +1334,30 @@ const point = document.getElementById('point');
 	var answertexth3 = document.getElementById("answertext3").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth3 === trueanswer ) {
+			if (formCount === questionCount) {
+				setTimeout(function() {
+				winnerdiv.style.display = '';
+				winnermusic.play();
+				    if (currentPosition < path6.length - 1) {
+						currentPosition++;
+						winnerback.style.animation = path6[currentPosition].animation;
+
+					} else {
+						currentPosition = 0;
+						winnerback.style.animation = path6[currentPosition].animation;
+					}
+					document.getElementById('winnerback').onclick = function() {
+					winnerdiv.style.display= 'none';
+					buttonSound.play();
+					}
+				}, 1800);
+
+			}
+			
+			
+			
+			
+			
 		const stationWidthPercentage = 83 / formCount;
 		point.style.left = `${Positionnum * stationWidthPercentage}%`;
 		Positionnum++;
@@ -1135,7 +1445,50 @@ const point = document.getElementById('point');
 		answertexts3.style.background = '#ff000052';
 		gameover.play();
 		setTimeout(function() {
+		alnatijafalse.style.display = 'flex';
+			document.getElementById('alnatijafalse').onclick = function() {
+			alnatijafalse.style.display= 'none';
+			buttonSound.play();
+			}
 		answertexts3.style.background = '';
+		Positionnum = 0;
+		questionCount = 1;
+		buttonSound.play();
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
+  var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];
 		}, 1000);
 		}
 	});
@@ -1143,6 +1496,25 @@ const point = document.getElementById('point');
 	var answertexth4 = document.getElementById("answertext4").innerHTML;
 	var trueanswer = document.getElementById('trueanswer' + questionCount).value;
 		if (answertexth4 === trueanswer ) {
+		
+			if (formCount === questionCount) {
+				setTimeout(function() {
+				winnerdiv.style.display = '';
+				winnermusic.play();
+				    if (currentPosition < path6.length - 1) {
+						currentPosition++;
+						winnerback.style.animation = path6[currentPosition].animation;
+
+					} else {
+						currentPosition = 0;
+						winnerback.style.animation = path6[currentPosition].animation;
+					}
+					document.getElementById('winnerback').onclick = function() {
+					winnerdiv.style.display= 'none';
+					buttonSound.play();
+					}
+				}, 1800);
+			}
 		const stationWidthPercentage = 83 / formCount;
 		point.style.left = `${Positionnum * stationWidthPercentage}%`;
 		Positionnum++;
@@ -1230,13 +1602,103 @@ const point = document.getElementById('point');
 		answertexts4.style.background = '#ff000052';
 		gameover.play();
 		setTimeout(function() {
+		alnatijafalse.style.display = 'flex';
+			document.getElementById('alnatijafalse').onclick = function() {
+			alnatijafalse.style.display= 'none';
+			buttonSound.play();
+			}
 		answertexts4.style.background = '';
+		Positionnum = 0;
+		questionCount = 1;
+		buttonSound.play();
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
+  var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];
 		}, 1000);
 		
 		}	
 	});
+	var alnatija = document.getElementById('alnatija');
+	document.getElementById('restgameplay').onclick = function() {
+		Positionnum = 0;
+		questionCount = 1;
+		buttonSound.play();
+		const stationWidthPercentage = 83 / formCount;
+		point.style.left = `${Positionnum * stationWidthPercentage}%`;
+		Positionnum++;
+  var textquestions  = document.getElementById('textquestions').innerHTML;
+    var answertext1  = document.getElementById('answertext1').innerHTML;
+    var answertext2  = document.getElementById('answertext2').innerHTML;
+    var answertext3 = document.getElementById('answertext3').innerHTML;
+    var answertext4  = document.getElementById('answertext4').innerHTML;	
+
+    var answerinput = document.getElementById('answerinput' + questionCount).value;
+    var trueanswer = document.getElementById('trueanswer' + questionCount).value;
+    var falsea1nswer = document.getElementById('falsea1nswer' + questionCount).value;
+    var falsea2nswer = document.getElementById('falsea2nswer' + questionCount).value;
+    var falsea3nswer = document.getElementById('falsea3nswer' + questionCount).value;
+
+    // وضع القيم في مصفوفة
+    var answers = [trueanswer, falsea1nswer, falsea2nswer, falsea3nswer];
+
+    // دالة لخلط العناصر في المصفوفة
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // خلط المصفوفة
+    shuffle(answers);
+
+    // توزيع القيم المختلطة على العناصر المستهدفة
+    document.getElementById("textquestions").innerHTML = answerinput;
+    document.getElementById("answertext1").innerHTML = answers[0];	
+    document.getElementById("answertext2").innerHTML = answers[1];
+    document.getElementById("answertext3").innerHTML = answers[2];
+    document.getElementById("answertext4").innerHTML = answers[3];
+		
+	alnatija.style.display= 'flex';
+		document.getElementById('alnatija').onclick = function() {
+		alnatija.style.display= 'none';
+		buttonSound.play();
+		}
+	}
 	
-	questionCount
+
 	</script>
 <!-- الضبط -->
 	<script>
