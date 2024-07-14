@@ -711,9 +711,75 @@
 			background: #ffffff;
 			color: black;
 			}
+			.loader {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: black;
+			z-index: 4;
+			}
+			.intqal {
+			height: 100vh;
+			width: 100vw;
+			z-index: 5;
+			position: absolute;
+			}
+			@keyframes intqal {
+				0%{
+					background: black;
+				}
+				50% {
+					background: black;
+				}
+				100% {
+					background: transparent;
+				}				
+			}
+			#intqal.rotate {
+			animation: intqal;
+			}
+			@keyframes intqal1 {
+				0%{
+					background: black;
+				}
+				50% {
+					background: black;
+				}
+				100% {
+					background: transparent;
+				}					
+			}
+			#intqal.rotate {
+			animation: intqal1;			
+			}
+			.whous {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			}			
+			.whous1 {
+			direction: rtl;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.3vw;
+			background: #ffffffb3;
+			padding: 2vw;
+			border-radius: 4vw;
+			width: 50vw;
+			}
 		</style>
 	</head>
 	<body id="body" class="body" style='background: url(https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png) no-repeat; background-size: 100vw 100vh;'>
+	<div class="loader">
+        <p style="color: white;direction: rtl;font-size: 3vw;">انتظر...</p>
+    </div>
+	<div id="intqal" class="intqal" style="display: none;">
+	</div>
 		<div id="mainmenu" class="mainmenu">
 			<div id="pleaseaddquestions" class="pleaseaddquestions" style="display:none;">
 				<p id="pleaseaddquestions1" class="pleaseaddquestions1">يرجى إضافة الأسئلة</p>
@@ -730,7 +796,7 @@
 		<div id="gameplay" class="gameplay" style="display:none;">
 			<div id="winnerdiv" class="winnerdiv" style="display:none;">
 				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D9%86%D9%82%D9%88%D8%AF%20%D8%A7%D9%84%D9%81%D9%88%D8%B2.gif" id="coins" class="coins"></img>
-				<img src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D9%88%D9%84%D8%AF%20%D8%A7%D9%84%D9%81%D9%88%D8%B2.png" id="winnerboy" class="winnerboy"></img>
+				<img style="width: 14vw; height: 50vh;" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D9%88%D9%84%D8%AF%20%D8%A7%D9%84%D9%81%D9%88%D8%B2.png" id="winnerboy" class="winnerboy"></img>
 				<p id="winnertext" class="winnertext">أحسنت لقد فزت!</p>
 				<div id="winnerback" class="winnerback"></div>
 			</div>
@@ -784,17 +850,39 @@
 			<div id="editingbuttons" class="editingbuttons">
 				<img title="إضافة سؤال" id="addquestion" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%A5%D8%B6%D8%A7%D9%81%D8%A9%20%D8%B3%D8%A4%D8%A7%D9%84.png"></img>
 				<img title="تحميل النموذج لاستخدامه مرّة أخرى" id="dwonloadquestions" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%AA%D8%AD%D9%85%D9%8A%D9%84%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png"></img>
-				<img title="استخدام نموذج تم تحميله مسبقًا" id="importquestions" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%A7%D8%B3%D8%AA%D9%8A%D8%B1%D8%A7%D8%AF%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png"></img>
+				<input type="file" id="upload" onchange="uploadExcel()" style="display:none;">
+				<img id="uploadImage" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%A7%D8%B3%D8%AA%D9%8A%D8%B1%D8%A7%D8%AF%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png" title="استخدام نموذج تم تحميله مسبقًا"onclick="document.getElementById('upload').click();">
 				<img title="حفظ النموذج الحالي لاستخدامه في اللعبة" id="savequestions" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1%20%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9/%D8%AD%D9%81%D8%B8%20%D8%A7%D9%84%D9%86%D9%85%D9%88%D8%B0%D8%AC.png"></img>
+				<img title="نموذج جديد" id="restedit" class="editingbuttonsclass" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A5%D8%B9%D8%A7%D8%AF%D8%A9.png"></img>	
 			</div>
 		</div>
 		<div id="options" class="options" style="display:none;">
 			<img id="back" class="back" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
 			<img id="option1" class="option1" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B4%D8%A7%D8%B4%D8%A9%20%D9%85%D9%85%D8%AA%D9%84%D8%A6%D8%A9.png"></img>
-			<img id="truefullscreen" class="truefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B5%D8%AD.png"></img>			<img id="falsefullscreen" class="falsefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%AE%D8%B7%D8%A3.png"></img>				
-			
+			<img id="truefullscreen" class="truefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%B5%D8%AD.png"></img>			<img id="falsefullscreen" class="falsefullscreen" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%A3%D8%B2%D8%B1%D8%A7%D8%B1/%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9/%D8%AE%D8%B7%D8%A3.png"></img>
 		</div>
 		<div id="whous" class="whous" style="display:none;">
+			<div class="whous1">
+			<p style="font-weight: bold;">(من سيربح المليون)</p>
+			<p>لعبة تعليمية، مِن ضمن مبادرات المُعلم حمزة أبو سكوت  لتصميم وبرمجة كلّ ما يحتاج المُعلّم العربي مِن أدوات تساعده في مهنة التدريس.</p>
+			<p style="margin: 0;" >إليكم بعض الروابط التي قد تُهمّكم:</p>
+			<ul>
+				<li><a style="text-decoration: none;color: #F44336;" href="https://edugamecar.blogspot.com/?fbclid=IwZXh0bgNhZW0CMTAAAR0tqhCArW80DYVmG6t9iddGDqh09C-e21oyU-6M_PbNiEZ5Ha9-aGnyK-s_aem_8_GRDen6-G_QdYbZoYU_ag">لعبة سباق السيارات التعليمية.</a></li>
+				<li><a style="text-decoration: none;color: #F44336;" href="https://play.google.com/store/apps/details?id=www.alarod.com&pli=1">تطبيق التقطيع العَروضي - الشّعر العَربي.</a></li>
+				<li><a style="text-decoration: none;color: #F44336;" href="https://ta7dierjo.blogspot.com/">برمجية التحضير اليومي الإلكتروني - نموذج وزارة التربية والتعليم الأردنيّة.</a></li>
+				<li><a style="text-decoration: none;color: #F44336;" href="https://ta7dier.blogspot.com/">برمجية التحضير اليومي الإلكتروني - نموذج مدارس وكالة الغوث الدوليّة.</a></li>
+				<li><a style="text-decoration: none;color: #F44336;" href="https://ta7dierjo.blogspot.com/">برمجية سحب دفتر العلامات الإلكتروني - نموذج وكالة الغوث الدّولية.</a></li>
+			</ul>
+			<p>تابعونا على مواقع التواصل الاجتماعي لرؤية المزيد:</p>
+			<div>
+			<a href="https://web.facebook.com/Hamza.Abu.Sakoot/"><img  src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D9%85%D9%8E%D9%86%20%D9%86%D8%AD%D9%86/%D9%81%D9%8A%D8%B3.png" style="width: 2vw;height: 3vh;"></img></a>
+			<a href="https://www.youtube.com/@shuonalmoalim"><img  src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D9%85%D9%8E%D9%86%20%D9%86%D8%AD%D9%86/%D9%8A%D9%88%D8%AA%D9%8A%D9%88%D8%A8.png" style="width: 2vw;height: 3vh;"></img></a>			
+			</div>
+			<p style="margin: 0;">المعلّم حمزة أبو سكوت.</p>
+			<p style="margin: 0;">واتساب: 00962787473874</p>
+			<p style="margin: 0;">جميع الحقوق محفوظة © 2024</p>			
+			</div>
+			
 			<img id="whousback" class="whousback" src="https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%AE%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%84%D8%B9%D8%A8/%D8%A7%D9%84%D8%B1%D8%AC%D9%88%D8%B9.png"></img>
 		</div>
 		
@@ -821,6 +909,7 @@ body.addEventListener('mouseup', function() {
     });
 </script>		
 <!-- ابدأ -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
 	<script>
 	var bodyElement = document.querySelector('body');	
 	var mainmenu = document.getElementById('mainmenu');	
@@ -830,11 +919,20 @@ body.addEventListener('mouseup', function() {
 	var	optionsgameplay = document.getElementById('optionsgameplay');
 	var	optionsGPslide = document.getElementById('optionsGPslide');
 	var pleaseaddquestions = document.getElementById('pleaseaddquestions');
+	var intqal = document.getElementById('intqal');
 	let formCount = 1;
 	let clickCount = 0;
+	currentPositionn = 0;	
+	var path7 = [
+        {animation:'1s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running intqal'},
+        {animation:'1s cubic-bezier(0.39, 0.23, 0.25, 0.7) 0s 1 normal forwards running intqal1'}	
+	];
 	document.getElementById('startbutton').onclick = function() {
-	
-		if (formCount === 1) {
+	intqal.style.display= '';
+	setTimeout(function() {
+		intqal.style.display= 'none';
+	}, 1000);
+		if (formCount <= 1) {
 		pleaseaddquestions.style.display = ''; 
 		buttonSound.play();
 			document.getElementById('pleaseaddquestions').onclick = function() {
@@ -843,6 +941,14 @@ body.addEventListener('mouseup', function() {
 			}
 		} else {
 		
+			if (currentPositionn < path7.length - 1) {
+				currentPositionn++;
+				intqal.style.animation = path7[currentPositionn].animation;
+
+			} else {
+				currentPositionn = 0;
+				intqal.style.animation = path7[currentPositionn].animation;
+			}
 		mainmenu.style.display = 'none';
 		Boxb.style.display = 'none';		
 		buttonSound.play();
@@ -1697,8 +1803,120 @@ const point = document.getElementById('point');
 		buttonSound.play();
 		}
 	}
-	
+	document.getElementById('restedit').onclick = function() {
+	var addquestion = document.getElementById('addquestion');
+	addquestion.style.display = '';
+	buttonSound.play();
 
+        var forms = document.querySelectorAll('form[id^="questionsform"]');
+        forms.forEach(function(form) {
+
+                form.remove();
+
+		});
+		formCount = 0;
+
+	}
+	document.getElementById('dwonloadquestions').onclick = function() {
+	buttonSound.play();
+	        let data = [];
+            let i = 1;
+            while (document.getElementById('questionsform' + i)) {
+                let form = document.getElementById('questionsform' + i);
+                let formData = {};
+                for (let element of form.elements) {
+                    if (element.id) {
+                        formData[element.id] = element.value;
+                    }
+                }
+                data.push(formData);
+                i++;
+            }
+            
+            let ws = XLSX.utils.json_to_sheet(data);
+            let wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Forms");
+            
+            XLSX.writeFile(wb, "نموذج أسئلة لعبة من سيربح المليون.xlsx");
+	}
+	    function uploadExcel() {
+            let input = document.getElementById('upload');
+            let file = input.files[0];
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let data = new Uint8Array(e.target.result);
+                let workbook = XLSX.read(data, {type: 'array'});
+                let sheet = workbook.Sheets[workbook.SheetNames[0]];
+                let json = XLSX.utils.sheet_to_json(sheet);
+                for (let i = 0; i < json.length; i++) {
+                    let form = document.getElementById('questionsform' + (i + 1));
+                    if (form) {
+                        for (let key in json[i]) {
+                            if (form.elements[key]) {
+                                form.elements[key].value = json[i][key];
+                            }
+                        }
+                    }
+                }
+            };
+            reader.readAsArrayBuffer(file);
+        }
+        function uploadExcel() {
+						var addquestion = document.getElementById('addquestion');
+				addquestion.style.display = 'none';
+            let input = document.getElementById('upload');
+            let file = input.files[0];
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let data = new Uint8Array(e.target.result);
+                let workbook = XLSX.read(data, {type: 'array'});
+                let sheet = workbook.Sheets[workbook.SheetNames[0]];
+                let json = XLSX.utils.sheet_to_json(sheet);
+
+                let formdiv = document.getElementById('formdiv');
+                
+                if (!formdiv) {
+                    console.error('formdiv element not found.');
+                    return;
+                }
+
+                // مسح النماذج الحالية
+                formdiv.innerHTML = '';
+
+                for (let i = 0; i < json.length; i++) {
+                    let form = createForm(i + 1);
+                    formdiv.appendChild(form);
+
+                    let formData = json[i];
+                    for (let key in formData) {
+                        let input = form.querySelector(`[name=${key}]`);
+                        
+                        if (input) {
+                            input.value = formData[key];
+                        }
+                    }
+                }
+            };
+            reader.readAsArrayBuffer(file);
+        }
+
+        function createForm(index) {
+            let form = document.createElement('form');
+            form.id = 'questionsform' + index;
+            form.className = 'questionsform';
+
+            form.innerHTML = `
+                <label for="answerinput${index}">السؤال (${index})</label>
+                <input id="answerinput${index}" name="answerinput${index}" class="answerinput" required="">
+                <br><br>
+                <input id="trueanswer${index}" name="trueanswer${index}" class="inputclass" placeholder="الإجابة الصحيحة" required="">
+                <input id="falsea1nswer${index}" name="falsea1nswer${index}" class="inputclass" placeholder="إجابة خاطئة" required="">
+                <input id="falsea2nswer${index}" name="falsea2nswer${index}" class="inputclass" placeholder="إجابة خاطئة" required="">
+                <input id="falsea3nswer${index}" name="falsea3nswer${index}" class="inputclass" placeholder="إجابة خاطئة" required="">
+            `;
+            
+            return form;
+        }
 	</script>
 <!-- الضبط -->
 	<script>
@@ -1771,6 +1989,13 @@ const point = document.getElementById('point');
 		bodyElement.style.background = "url('https://raw.githubusercontent.com/9hamz999/edugames/main/%D9%84%D8%B9%D8%A8%D8%A9%20%D9%85%D9%86%20%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD%20%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86/%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA/%D8%AE%D9%84%D9%81%D9%8A%D8%A9%20%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9.png') 0% 0% / 100vw 100vh no-repeat";
 		whous.style.display = 'none';
 	}
+	</script>
+	<script>
+	window.addEventListener('load', function () {
+    // إخفاء شاشة الانتظار
+    document.querySelector('.loader').style.display = 'none';
+	});
+
 	</script>
 	</body>
 </html>
